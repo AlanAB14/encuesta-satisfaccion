@@ -1,0 +1,435 @@
+@import url(variables.css);
+@import url(ajustes.css);
+
+
+
+/* HEADER */
+.fondo-celeste {
+    background-color: var(--light-blue);
+    width: 100%;
+    height: 1.2rem;
+}
+
+.fondo-azul {
+    background-color: var(--blue);
+    width: 100%;
+}
+
+.fondo-azul__img {
+    width: 12.5rem;
+    padding: 1.2rem 0;
+    margin-left: 3.75rem;
+}
+
+/* ENCUESTA */
+
+.block_title {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 2.5rem 0;
+    margin-top: 1.2rem;
+}
+
+.title_valoracion {
+    font-size: 2.2rem;
+}
+
+.img_estrella {
+    margin-left: 1rem;
+    width: 4rem;
+}
+
+.block_respuestas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+.box_rta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(140, 196, 226, 0.1);
+    box-shadow: 0rem 0rem 38px 4px rgba(140, 196, 226, 0.1);
+    padding: .6rem 1rem;
+    cursor: pointer;
+}
+
+.box_rta-disabled {
+    cursor: initial;
+}
+
+.activo {
+    transition: all .4s;
+    background: rgba(140, 196, 226, 0.2);
+}
+
+.box_rta-margin:not(:last-of-type) {
+    margin-right: 1rem;
+}
+
+.box_rta-margin {
+    backdrop-filter: blur(10px);
+
+}
+
+
+/* RESPUESTAS */
+
+.estrellas_puntuacion {
+    height: 3.5rem;
+    width: auto;
+}
+.texto-respuesta {
+    font-size: 1.4rem;
+}
+
+/* ENCUESTA CHECK */
+
+.block_check {
+    padding: 2rem 0;
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--light-grey);
+}
+.block-inputs-checks {
+    display: flex;
+}
+.input_container {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    position: relative;
+}
+.input_container-text {
+    width: 160%;
+    margin-left: -60%;
+}
+
+.input_check-paragraph {
+    font-size: 1.4rem;
+    margin-left: .7rem;
+}
+
+.input_spacer {
+    margin-right: 2rem;
+}
+
+.input_check {
+    margin-right: 1rem;
+}
+
+.title_check {
+    color: var(--blue);
+    font-size: 2rem;
+}
+
+/* CHECKBOX */
+
+.input_container input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: var(--blue);
+    /* Not removed via appearance */
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: none;
+    border-radius: .5rem;
+    transform: translateY(-0.075em);
+
+    display: grid;
+    place-content: center;
+}
+
+.input_container input[type="checkbox"]::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em white;
+
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.input_container input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+
+/* INPUT TEXT */
+.input_text {
+    background-color: rgb(190, 190, 190);
+    outline: none;
+    border: none;
+    font-size: 1.4rem;
+    height: 2rem;
+    padding: 2px;
+    width: 100%;
+}
+
+.disabled {
+    background-color: rgb(145, 145, 145);
+}
+
+/* ENCUESTA COMENTARIO */
+.section_comentario {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.block-comentario {
+    background-color: var(--blue);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.block-title-comentario {
+    display: flex;
+}
+
+.title_comentario {
+    color: white;
+    font-size: 1.6rem;
+}
+
+.text_image {
+    width: 4rem;
+    height: 4rem;
+    margin-left: 10rem;
+}
+
+.comentario_text-area {
+    width: 100%;
+    height: 10rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+/* BLOQUE MUCHAS GRACIAS */
+.section_muchas-gracias {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-muchas-gracias {
+    background: rgba(140, 196, 226, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+}
+
+.block-muchas-gracias-plus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem 0rem 4rem;
+    border-radius: 1rem;
+}
+
+.ok-image {
+    width: 4rem;
+    height: 4rem;
+}
+
+.muchas-gracias-title {
+    font-size: 2.6rem;
+}
+
+.muchas-gracias-text {
+    font-size: 1.6rem;
+    margin-right: 2rem;
+}
+
+.muchas-gracias_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(140, 196, 226, 0.1);
+}
+
+.muchas-gracias_box-plus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(140, 196, 226, 0.1);
+    border-radius: 1rem;
+}
+.button_text-bold {
+    font-weight: bold;
+}
+
+.btn-muchas-gracias {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: white;
+    background-color: var(--blue);
+    border: none;
+    outline: none;
+    padding: 1rem 3.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+
+
+.text_MSPlus {
+    font-size: 1.6rem;
+}
+
+.block-muchas-gracias-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+}
+
+/* ENCUESTA REALIZADA */
+
+.section_encuesta-realizada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_encuesta-realizada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(140, 196, 226, 0.1);
+    border-radius: 1rem;
+    padding: 2rem 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.text-realizada-title {
+    font-size: 1.6rem;
+}
+
+.text-realizada {
+    font-size: 1.6rem;
+}
+
+.btn-enviar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1.5rem;
+    font-size: 1.6rem;
+    outline: none;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    background-color: var(--light-blue);
+    transition: all .2s;
+}
+
+.btn-enviar:hover {
+    transform: scale(1.1);
+}
+
+.btn-enviar:active {
+    transform: scale(1);
+}
+
+.disable-button {
+    background-color: #c0c0c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1.5rem;
+    font-size: 1.6rem;
+    outline: none;
+    border: none;
+    border-radius: .5rem;
+}
+
+.box_button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* ERROR */
+
+.box_error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    transition: all 1s;
+}
+
+.error-valoracion {
+    background-color: rgba(219, 58, 58, 0.623);
+    padding: 1rem;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+}
+
+/* LOAD IMAGE */
+
+.load-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load-image {
+    width: 8rem;
+}
+
+/* INGRESO SIN EMAIL */
+
+.sin-email {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: rgba(219, 58, 58, 0.623);
+}
+
+.sin-email-text {
+    font-size: 1.5rem;
+
+}
+
+.cooperacion_href {
+    text-decoration: none;
+    color: white;
+}

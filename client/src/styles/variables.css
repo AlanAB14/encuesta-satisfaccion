@@ -1,0 +1,27 @@
+:root {
+
+    /* COLORS */
+    --blue: #132942;
+    --light-blue: #8CC4E2;
+    --white: #ffffff;
+    --light-grey: #CECECE;
+
+}
+
+.titilium-bold {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.titilium-regular {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    color: var(--blue);
+}
+
+.titilium-semibold {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    color: var(--blue);
+}
